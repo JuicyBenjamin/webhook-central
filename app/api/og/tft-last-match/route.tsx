@@ -26,7 +26,7 @@ export async function GET() {
         }}
       >
         <p>{match.placement}</p>
-        {match.summary.units.map((unit) => <img width="50" height="50" src={getImgUrl(unit.character_id)} />)}
+        {match.summary.units.map((unit) => <img key={unit.character_id} width="50" height="50" src={getImgUrl(unit.character_id)} />)}
 
       </div>
     ),
